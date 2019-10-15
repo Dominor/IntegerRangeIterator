@@ -7,16 +7,18 @@ public class Main {
     public static void main(String[] args) {
 
         IntegerRange range = new IntegerRange(1, 10);
-        Iterator<Integer> iterator = range.iterator();
 
-        /** for (Integer i : range) {
+        for (Integer i : range) {
             System.out.println(i);
-        }*/
+        }
 
-        System.out.println("Range " + range);
-        while (iterator.hasNext()) {
+        range.iterator().remove();
+        range.setReversed(true);
 
-            System.out.println(iterator.next());
+        System.out.println("\n Titanic has hit. Time to go back to Mother England. \n");
+
+        for(Integer i : range) {
+            System.out.println(i);
         }
     }
 }
